@@ -1,20 +1,21 @@
 import React from 'react'
 import "./Home.scss"
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 	return (
 		<div className="Home">
-			<nav class="nabigisyon flexed-between">
-				<div alt="Lisa Logo" class="logoDesu">
+			<nav className="nabigisyon flexed-between">
+				<div alt="Lisa Logo" className="logoDesu">
 					<p>Lisa</p>
 				</div>
-				<ul class="flexed-evenly">
-					<li><a class="nav-links">Home</a></li>
-					<li><a class="nav-links">About</a></li>
-					<li><a class="nav-links">Contact</a></li>
-					<li><a class="nav-links">Services</a></li>
+				<ul className="flexed-evenly">
+					<li><Link to="/"><span className ="nav-links">Home</span></Link></li>
+					<li><Link to="/About"><span className="nav-links">About</span></Link></li>
+					<li><Link to="/Contact"><span className="nav-links">Contact</span></Link></li>
+					<li><Link to="/Service"><span className="nav-links">Services</span></Link></li>
 				</ul>
-			</nav>
+			</nav> 
 		</div>
 	)
 }

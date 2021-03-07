@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 
 $sm_font: 14px;
 $md_font: 17px;
 $lg_font: 45px;
 
+.flexed-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flexed-between {
+    display: flex;
+    justify-content: space-between;
+}

@@ -2,14 +2,16 @@
 
 import React from 'react'
 import "./About.scss"
+import Nav from "../../Global_Component/Nav/Nav";
 
-const About =()=>{
-	return(
+const About = () => {
+	return (
 		<div className="About">
-      		<h1>This page is About</h1>
-    	</div>
-		
+			<Nav />
+			<h1>This page is About</h1>
+		</div>
+
 	)
-} 
+}
 
 export default About

@@ -1,0 +1,27 @@
+@import "../../../Assets/Styles/_Fonts.scss";
+
+
+nav {
+            align-items: center;
+            padding: 12px 10%;
+            background:rgb(243, 243, 243);
+            
+            a{
+                text-decoration: none;
+                font-family: 'Work Sans', sans-serif;  
+                font-size: $md_font;
+            }
+    
+            ul{
+                list-style: none;
+                li{
+                    padding-left: 20px;
+                }
+            }
+    
+            .logoDesu{
+                font-family: 'Dancing Script';
+                p{font-size: $lg_font;}
+            }
+}
+

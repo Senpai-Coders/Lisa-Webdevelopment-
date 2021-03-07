@@ -2,14 +2,16 @@
 
 import React from 'react'
 import "./Service.scss"
+import Nav from "../../Global_Component/Nav/Nav";
 
-const Service =()=>{
-	return(
+const Service = () => {
+	return (
 		<div className="Service">
-      		<h1>This page is Service</h1>
-    	</div>
-		
+			<Nav />
+			<h1>This page is Service</h1>
+		</div>
+
 	)
-} 
+}
 
 export default Service

@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 
-$sm_font: 14px;
-$md_font: 17px;
-$lg_font: 45px;
+$xsm_font: 0.5em;
+$sm_font: 0.8em;
+$md_font: 1em;
+$lg_font: 2em;
 
 .flexed-evenly {
     display: flex;

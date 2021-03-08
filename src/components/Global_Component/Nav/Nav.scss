@@ -34,9 +34,13 @@ nav {
 
     li {
         .nav_ico {
-            max-width: $nav_ico_wh;
-            max-height: $nav_ico_wh;
-            padding-right: 13px;
+            max-width: $nav_ico_sm;
+            max-height:$nav_ico_sm;
+            padding-right:0.5vw;
+            @media only screen and (max-width: $md_w) {
+                max-width: $nav_ico_md;
+                max-height:$nav_ico_md;
+            }
         }
 
         align-items: center;

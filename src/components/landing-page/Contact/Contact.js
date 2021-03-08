@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+
 import axios from 'axios';
+
 import Nav from "../../Global_Component/Nav/Nav";
+import Footer from "../../Global_Component/Footer/Footer";
 
 import "./Contact.scss"
 
@@ -89,6 +92,7 @@ const Contact = () => {
 					<button onClick={handleSubmitButton} type="submit"> submit </button>
 				</div>
 			</div>
+			<Footer/>
 		</div>
 
 	)

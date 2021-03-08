@@ -1,0 +1,65 @@
+
+@import "../../../Assets/Styles/_Colors.scss";
+@import "../../../Assets/Styles/_Fonts.scss";
+@import "../../../Assets/Styles/_ScreenSizes.scss";
+
+
+.Footer {
+
+    bottom: 0px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+
+    table{
+        position: relative;
+        text-align: left;
+        margin-left: auto; 
+        border-collapse: collapse;
+        margin-right: 4em;
+        @media only screen and (max-width: $md_w) {
+           
+            margin: auto;
+        }
+
+       
+        td,th{
+            padding:1.5vh 3vw 0vw 3vw;
+            
+        }
+        th{
+            font-size: $sm_font;
+            font-weight: bolder;
+        }
+        td{
+            font-size:$sm_font;
+        }
+      
+    }
+    .footer-credentials{
+        
+        position: relative;
+        font-size: $sm_font;
+        margin: 2em 4em 0em 0em;
+        padding: 1.5em;
+        text-align: right;
+        p{
+            padding-left: 1em;
+            margin-top: 1em;
+            span{
+                margin-right: 2em;
+                font-weight: bolder;
+                
+            }
+        }
+        
+        @media only screen and (max-width: $md_w) {
+            text-align: center;
+        }
+    }
+
+   
+}

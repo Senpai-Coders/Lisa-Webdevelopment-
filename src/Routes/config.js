@@ -5,7 +5,7 @@ const About = lazy(() => import("../components/landing-page/About/About"));
 const Home = lazy(() => import("../components/landing-page/Home/Home"));
 const Service = lazy(() => import("../components/landing-page/Service/Service"));
 const GraphicDesign = lazy(() => import("../components/Portfolio-page/Graphic_design/Graphic_design"));
-
+const Web_development = lazy(() => import("../components/Portfolio-page/Web_development/Web_development"));
 // Portfolio Page 
 const ROUTERS = [
     {
@@ -27,6 +27,10 @@ const ROUTERS = [
     {
         path: "/GraphicDesign",
         component: GraphicDesign
+    },
+    {
+        path: "/Webdevelopment",
+        component: Web_development,
     }
 ]
 

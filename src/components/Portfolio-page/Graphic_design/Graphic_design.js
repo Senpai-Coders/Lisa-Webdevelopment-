@@ -8,7 +8,6 @@ const Graphic_design = () => {
 			<Nav />
 			<h1>This page is Graphic_design Page </h1>
 		</div>
-
 	)
 }
 //augh shems

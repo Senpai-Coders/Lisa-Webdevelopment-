@@ -50,7 +50,7 @@ const Footer =()=>{
 				</tbody>
 			</table>
 			<div className = "footer-credentials">
-				<p> Skill created by <strong> Coders_Senpai </strong> </p>
+				<p> Skillfully crafted by <strong> Senpai_Coders</strong> </p>
 				<p> Copyright © Liza tech 2021</p>
 			</div>
 			

@@ -2,15 +2,20 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import "./Nav.scss"
+
 import Home_ico from '../../../Assets/Imgs/home.png'
 import About_ico from '../../../Assets/Imgs/about.png'
 import Contact_ico from '../../../Assets/Imgs/contact.png'
 import Services_ico from '../../../Assets/Imgs/service.png'
 
+import Transition from '../Transition/Transition'
+
 const Nav = () => {
 	return (
 		<nav className="flexed-between">
+			<Transition/>
 			<div alt="Lisa Logo" className="logoDesu">
 				<p>Lisa</p>
 			</div>

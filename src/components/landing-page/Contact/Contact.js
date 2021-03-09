@@ -33,7 +33,7 @@ const Contact = () => {
 			email: email,
 			message: message,
 		}
-		axios.post('/Contact', data)
+		axios.post('http://localhost:5000/Contact', data)
 			.then(res => {
 				setIsSent(true)
 				resetForm()
@@ -92,7 +92,7 @@ const Contact = () => {
 					<button onClick={handleSubmitButton} type="submit"> submit </button>
 				</div>
 			</div>
-			<Footer/>
+			<Footer />
 		</div>
 
 	)

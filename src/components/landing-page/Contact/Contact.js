@@ -55,8 +55,9 @@ const Contact = () => {
 				.then(res => {
 					setIsSent(true)
 					resetForm()
-				}).catch(() => {
-					console.log("message not sent")
+					console.log("\n✔ Email sent to us successfully!\n") 
+				}).catch((err) => {
+					console.log(`\n✖ Failed sending email to us ${err}!\n`) 
 				})
 		}
 	}

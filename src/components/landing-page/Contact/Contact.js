@@ -7,8 +7,11 @@ import Footer from "../../Global_Component/Footer/Footer";
 
 import "./Contact.scss"
 
-const Contact = () => {
+const VALIDATORXD = require("email-validator");
 
+const Contact = () => {
+	const [emailIsValid, setEmailValid] = useState(true);
+	const [messageIsValid, setMessageValid] = useState(true);
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -27,19 +30,35 @@ const Contact = () => {
 			setIsSent(false)
 		}, 3000)
 	}
+
+	const checkMessage = () => {
+		var msg = message.replace(/\d+/g, '')
+		var words = msg.split(" ");
+		const result = words.filter(word => word.length > 0).length >= 4;
+		setMessageValid(result);
+		return result;
+	}
+
 	const handleSubmitButton = () => {
-		let data = {
-			name: name,
-			email: email,
-			message: message,
+
+		var validate = VALIDATORXD.validate(email)
+		setEmailValid(validate);
+
+		console.log(validate + " : " + !messageIsValid)
+		if (validate && checkMessage()) {
+			let data = {
+				name: name,
+				email: email,
+				message: message,
+			}
+			axios.post(URL, data)
+				.then(res => {
+					setIsSent(true)
+					resetForm()
+				}).catch(() => {
+					console.log("message not sent")
+				})
 		}
-		axios.post(URL, data)
-			.then(res => {
-				setIsSent(true)
-				resetForm()
-			}).catch(() => {
-				console.log("message not sent")
-			})
 	}
 	return (
 		<div className="Contact">
@@ -91,6 +110,9 @@ const Contact = () => {
 				<div className="submit-button">
 					<button onClick={handleSubmitButton} type="submit"> submit </button>
 				</div>
+				{
+					!emailIsValid ? <div> Invalid Email </div> : (!messageIsValid ? <div>Message should contain more than 3 words</div> : null)
+				}
 			</div>
 			<Footer />
 		</div>

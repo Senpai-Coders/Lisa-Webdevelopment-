@@ -13,7 +13,7 @@ const Contact = () => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 	const [isSent, setIsSent] = useState(false);
-
+	const URL = 'http://localhost:5000/Contact';
 
 	useEffect(() => {
 
@@ -33,7 +33,7 @@ const Contact = () => {
 			email: email,
 			message: message,
 		}
-		axios.post('http://localhost:5000/Contact', data)
+		axios.post(URL, data)
 			.then(res => {
 				setIsSent(true)
 				resetForm()

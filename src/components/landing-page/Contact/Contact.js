@@ -101,7 +101,7 @@ const Contact = () => {
 					<textarea
 						onChange={(e) => { setMessage(e.target.value) }}
 						value={message}
-						cols="30" rows="20"
+						cols="20" rows="10"
 						type="textarea"
 						name="description"
 						className="description"

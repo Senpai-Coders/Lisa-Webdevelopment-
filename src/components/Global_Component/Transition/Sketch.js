@@ -14,7 +14,7 @@ export default class App extends Component {
     p5.createCanvas(width,height).parent(parent)
   }
   draw = (p5) => {
-    p5.background(0)
+    p5.background(p5.color('#2f1452'))
     p5.fill(255)
     // rect(mouseX,mouseY,3,-100)
   

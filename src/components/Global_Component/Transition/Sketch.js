@@ -4,7 +4,6 @@ import Sketch from "react-p5";
 const width =  window.innerWidth;
 const height = window.innerHeight;
 let ball = [ [] ];
-let speed = 0 ;
 
 
 export default class App extends Component {

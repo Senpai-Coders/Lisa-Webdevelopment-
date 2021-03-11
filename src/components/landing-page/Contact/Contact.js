@@ -8,7 +8,6 @@ import Footer from "../../Global_Component/Footer/Footer";
 import "./Contact.scss"
 
 const VALIDATORXD = require("email-validator");
-const URL = 'http://localhost:5000/Contact';
 
 const Contact = () => {
 
@@ -68,7 +67,7 @@ const Contact = () => {
 			}
 			console.log(data)
 
-			axios.post(URL, data)
+			axios.post("/api/Contact", data)
 				.then(res => {
 					SetIsEmailSending(false)
 					resetForm()

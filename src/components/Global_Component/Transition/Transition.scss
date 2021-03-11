@@ -5,16 +5,16 @@
 
     overflow: hidden; /* Hide scrollbars */
     z-index: 100000000000;
-    position: fixed;
+    position: fixed; 
 
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
 
-    background-color: #2f1452;
+    background-color: #fbfbfb;
     font-family:"Work Sans", sans-serif;
-    color: white;
+    color: rgb(37, 127, 245);
    
     // Shadow 
     // -webkit-box-shadow: 0px 0px 85px 17px rgba(0,0,0,0.75);
@@ -23,23 +23,20 @@
 
 
     animation-name: tansition-1;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 
-
     @keyframes tansition-1 {
         0% {
-            top: 110%;
+            top: -100%;
         }
         50%{
             top:0%
         }   
         100%{
-            top:-110%;
-            bottom: 100%;
-            
-            
+            top:100%;
+            bottom: 0%;
         }
     }
 

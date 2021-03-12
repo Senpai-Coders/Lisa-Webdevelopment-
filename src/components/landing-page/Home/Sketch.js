@@ -44,7 +44,7 @@ export default class App extends Component {
   
   circle_MODEL = (p5) =>{
 
-    let colors = 'white'
+    let colors = p5.color('#4affe4')
     let xSpeed = p5.random( [0.2,1])*p5.random( [-1,1]);
     let ySpeed = p5.random( [0.2,1])*p5.random( [-1,1]);
     let x = p5.random(0 , windowWidth );

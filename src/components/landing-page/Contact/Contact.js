@@ -17,23 +17,26 @@ const Contact = () => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 	const [file, setFile ]= useState("");
+	const [fileName, setFileName ] = useState("")
 	
 
 	const [isEmailSending ,SetIsEmailSending] = useState(null)
 	const [resetE , setResetE] = useState(null)
 	useEffect(() => {
 
-	}, [setName, setEmail, setMessage, setFile ])
+	}, [setName, setEmail, setMessage, setFile ,setFileName ])
 	const resetForm = () => {
 		setFile('')
 		setName('')
 		setEmail('')
 		setMessage('')
-		resetAttachment()
+		resetAttachment();
+		
 		
 	}
 	const resetAttachment = ()=>{
 		if(resetE != null){
+			setFileName('')
 			resetE.target.value = null;
 		}
 	}
@@ -82,92 +85,130 @@ const Contact = () => {
 	const  selectFile = (e)=>{
 		let files = e.target.files;
 		setResetE(e);
+		
 		if( files.length>=1 ){
+			setFileName(files[0].name)
 			let reader = new FileReader();
 			reader.readAsDataURL( files[0] );
 			reader.onload = (e) =>{
 				setFile(e.target.result)
 				
+			}
+		}else{
+			setFileName('')
+			resetAttachment();
 		}
-	}
 	}
 	return (
 		<div className="Contact">
 			<Nav />
-			<div >
-				{/* Single item */}
-				<div>
-					<label htmlFor="name"> name </label>
-					<input
-						onChange={(e) => { setName(e.target.value) }}
-						value={name}
-						type="text"
-						name="name"
-						className="name"
-						placeholder="your name :" />
-				</div>
-				{/* End of single item */}
-
-
-
-				{/* Single item */}
-				<div>
-					<label htmlFor="Email"> Email </label>
-					<input
-						onChange={(e) => { setEmail(e.target.value) }}
-						value={email}
-						type="Email"
-						name="Email"
-						className="Email"
-						placeholder="Email@example.com" />
-				</div>
-				{/* End of single item */}
-
-
-
-				{/* Single item */}
-				<div>
-					<label htmlFor="description"> Description </label>
-					<textarea
-						onChange={(e) => { setMessage(e.target.value) }}
-						value={message}
-						cols="20" rows="10"
-						type="textarea"
-						name="description"
-						className="description"
-						placeholder="your message ... " />
-				</div>
-				{/* End of single item */}
-
-
-
-				{/* Single item */}
-				<div>
-				<button onClick = {()=>resetAttachment()} > Remove attachment</button>
-					<input 
-						type = 'file' 
-						name = 'file' 
-						className  = 'file-attachment' 
-						onChange = {(e)=>  selectFile(e)}
-					/>
-					
-					
-				</div>
-				{/* End of single item */}
-			
-
+			<div className = 'contact-container'>
+				<h1>Contact us</h1>
 				
-				<div className="submit-button">
-					<button onClick={handleSubmitButton} type="submit"> submit </button>
+				<div >
+					{/* Single item */}
+					<div>
+						<label htmlFor="name"> Your name </label>
+						<br/>
+						<input
+							onChange={(e) => { setName(e.target.value) }}
+							value={name}
+							type="text"
+							name="name"
+							className="name"
+							placeholder="your name :" />
+					</div>
+					{/* End of single item */}
+					<br/>
+
+
+					{/* Single item */}
+					<div>
+						<label htmlFor="Email"> Your Email Address </label>
+						<br/>
+						<input
+							onChange={(e) => { setEmail(e.target.value) }}
+							value={email}
+							type="Email"
+							name="Email"
+							className="Email"
+							placeholder="Email@example.com" />
+							
+						
+					</div>
+					{/* End of single item */}
+
+					<br/>
+
+					{/* Single item */}
+					<div>
+						<label htmlFor="description"> Enter your Message </label>
+						<br/>
+						<textarea
+							onChange={(e) => { setMessage(e.target.value) }}
+							value={message}
+							 rows="5"
+							type="textarea"
+							name="description"
+							className="description"
+							placeholder="your message ... " />
+					</div>
+					{/* End of single item */}
+
+					<br/>
+
+					{/* Single item */}
+					
+					{/* End of single item */}
+					<br/>
+
+					<div className = "invalid-answers">
+					{
+						!emailIsValid ? 
+						<div> Invalid Email </div> 
+						: (!messageIsValid ? 
+						<div>Message should contain more than 3 words</div> 
+						: null)
+					}
+					</div>
+					<div className="submit-button">
+						<button onClick={handleSubmitButton} type="submit"> submit </button>
+					</div>
+					{
+						isEmailSending ? <h1> Is sending </h1> : null
+					}
+					
+					<div className = 'file-input'>
+						
+						<label className="custom-file-upload" onClick = {()=>resetAttachment()} >
+							<p>Remove File</p>
+						</label>
+						<label className="custom-file-upload">
+							<input 
+								type = 'file' 
+								name = 'file' 
+								className  = 'file-attachment' 
+								onChange = {(e)=>  selectFile(e)}
+							/>
+							<p>Add File </p>
+							{' '}
+							
+						</label>
+					
+						{ 
+						fileName != ''? 
+						<label className="custom-file-upload file-name-text">
+							<p className = 'file-name-text'>{fileName}</p>
+						</label>
+						:null
+						}
+
+
+
+					</div>
 				</div>
-				{
-					isEmailSending ? <h1> Is sending </h1> : null
-				}
-				
-				{
-					!emailIsValid ? <div> Invalid Email </div> : (!messageIsValid ? <div>Message should contain more than 3 words</div> : null)
-				}
 			</div>
+
 			<Footer />
 		</div>
 

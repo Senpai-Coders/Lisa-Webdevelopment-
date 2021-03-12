@@ -3,7 +3,7 @@
 
 nav {
     align-items: center;
-    padding: 12px 10%;
+    padding: 12px 8%;
     background: rgba(0, 0, 0, 0.158);
     
     
@@ -57,11 +57,12 @@ nav {
     
     .logoDesu {
         font-family: "Dancing Script";
+        
         // p {
         //     font-size: $lg_font;
         // }
         img{
-            width:3em;
+            width:2em;
         }
         @media only screen and (max-width: $sm_w) {
             display: none;

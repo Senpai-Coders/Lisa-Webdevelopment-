@@ -33,7 +33,7 @@ const Footer =()=>{
 						<td> Web Development  </td>
 						<td> </td>
 						<td> Instagram </td>
-						<td> Legal Notice </td>
+						<td> </td>
 					</tr>
 					<tr>
 						<td> Tech Repairs </td>

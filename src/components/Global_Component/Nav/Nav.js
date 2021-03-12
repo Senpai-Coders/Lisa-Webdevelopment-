@@ -9,7 +9,7 @@ import Home_ico from '../../../Assets/Imgs/home.png'
 import About_ico from '../../../Assets/Imgs/about.png'
 import Contact_ico from '../../../Assets/Imgs/contact.png'
 import Services_ico from '../../../Assets/Imgs/service.png'
-
+import NavLisa_ico from '../../../Assets/Imgs/Lisa2.2.1.png'
 import Transition from '../Transition/Transition'
 
 const Nav = () => {
@@ -17,7 +17,8 @@ const Nav = () => {
 		<nav className="flexed-between">
 			<Transition/>
 			<div alt="Lisa Logo" className="logoDesu">
-				<p>Lisa</p>
+				{/* <p>Lisa</p> */}
+				<img src= {NavLisa_ico} className = 'logo-lisa' alt = 'lisa_ico'/>
 			</div>
 			<ul className="flexed-evenly">
 				<li><Link to="/"><img className="nav_ico" alt="Home" src={Home_ico} /><span className="nav-links">Home</span></Link></li>

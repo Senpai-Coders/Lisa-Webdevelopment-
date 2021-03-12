@@ -4,14 +4,15 @@
 nav {
     align-items: center;
     padding: 12px 10%;
-    background: rgb(243, 243, 243);
-
+    background: rgba(0, 0, 0, 0.158);
+    
+    
     a {
         text-decoration: none;
         font-family: "Work Sans", sans-serif;
         font-size: $md_font;
         font-weight: 600;
-        color: rgb(31, 31, 31);
+        color: white;
 
         padding: 13px 25px;
 
@@ -41,6 +42,7 @@ nav {
                 max-width: $nav_ico_md;
                 max-height:$nav_ico_md;
             }
+            
         }
 
         align-items: center;
@@ -52,13 +54,15 @@ nav {
             padding-left: 0;
         }
     }
-
+    
     .logoDesu {
         font-family: "Dancing Script";
-        p {
-            font-size: $lg_font;
+        // p {
+        //     font-size: $lg_font;
+        // }
+        img{
+            width:3em;
         }
-
         @media only screen and (max-width: $sm_w) {
             display: none;
         }

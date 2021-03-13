@@ -102,6 +102,7 @@ const Contact = () => {
 	return (
 		<div className="Contact">
 			<Nav />
+			<div className = 'background-animation'></div>
 			<div className = 'contact-container'>
 				<h1>Contact us</h1>
 				
@@ -133,8 +134,6 @@ const Contact = () => {
 							name="Email"
 							className="Email"
 							placeholder="Email@example.com" />
-							
-						
 					</div>
 					{/* End of single item */}
 
@@ -177,9 +176,7 @@ const Contact = () => {
 					{
 						isEmailSending ? <h1> Is sending </h1> : null
 					}
-					
 					<div className = 'file-input'>
-						
 						<label className="custom-file-upload" onClick = {()=>resetAttachment()} >
 							<p>Remove File</p>
 						</label>
@@ -194,7 +191,6 @@ const Contact = () => {
 							{' '}
 							
 						</label>
-					
 						{ 
 						fileName != ''? 
 						<label className="custom-file-upload file-name-text">
@@ -202,9 +198,6 @@ const Contact = () => {
 						</label>
 						:null
 						}
-
-
-
 					</div>
 				</div>
 			</div>

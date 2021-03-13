@@ -4,9 +4,30 @@
 nav {
     align-items: center;
     padding: 12px 8%;
-    background: rgba(0, 0, 0, 0.158);
+    // background: rgba(0, 0, 0, 0.158);
     
-    
+    .circle-nav{
+        top: 10%;
+        position: absolute;
+        width: 50%;
+        right: 0%;
+        height: 1px;
+        background-color: white;
+        &:after{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height:20px;
+            top: -10px;
+            left: -20px;
+            border: 2px solid white;
+            border-radius: 100px;
+            box-sizing: border-box;
+        }
+        
+       
+        
+    }
     a {
         text-decoration: none;
         font-family: "Work Sans", sans-serif;
@@ -15,7 +36,7 @@ nav {
         color: white;
 
         padding: 13px 25px;
-
+        
         span {
             @media only screen and (max-width: $md_w) {
                 display: none;
@@ -34,6 +55,7 @@ nav {
     }
 
     li {
+        // background-color: yellowgreen;
         .nav_ico {
             max-width: $nav_ico_sm;
             max-height:$nav_ico_sm;
@@ -46,14 +68,24 @@ nav {
         }
 
         align-items: center;
+        &:hover{
+           border-left: 2px solid white;
+        }
+    }
+   
+    .active{
+        border-left: 2px solid white;
     }
 
+    
     ul {
         list-style: none;
         @media only screen and (max-width: $sm_w) {
             padding-left: 0;
         }
+        
     }
+
     
     .logoDesu {
         font-family: "Dancing Script";

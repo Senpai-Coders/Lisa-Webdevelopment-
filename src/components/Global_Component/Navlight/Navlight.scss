@@ -1,5 +1,6 @@
 @import "../../../Assets/Styles/_Fonts.scss";
 @import "../../../Assets/Styles/_ScreenSizes.scss";
+@import "../../../Assets/Styles/_Classes.scss";
 
 
 .Navlight {
@@ -62,7 +63,6 @@
                 max-width: $nav_ico_md;
                 max-height:$nav_ico_md;
             }
-            
         }
 
         align-items: center;

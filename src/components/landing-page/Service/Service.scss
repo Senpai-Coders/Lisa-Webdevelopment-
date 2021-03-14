@@ -1,11 +1,99 @@
 @import "../../../Assets/Styles/_ScreenSizes.scss";
-@import "../../../Assets/Styles/Colors.scss";
+@import "../../../Assets/Styles/_Colors.scss";
+@import "../../../Assets/Styles/_Classes.scss";
+@import "../../../Assets/Styles/Fonts";
 
 .Service {
     background: $txt_gray1;
     font-family: "Ubuntu", sans-serif;
-}
 
-.Footer{
-    background: linear-gradient(8deg, rgba(114, 0, 95, 1) 0%, rgba(47, 20, 82, 1) 100%);
+    .service-section {
+        @extend .mar-x-8, .mar-t-7;
+
+        @media only screen and (max-width: $sm_w) {
+            display: block;
+            margin: 7px 8px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width:768px) {
+            display: block;
+            margin: 7px 8px;
+            text-align: center;
+        }
+
+        .container {
+            @extend .flexed-evenly;
+            @extend .mar-t-7;
+
+            @media only screen and (max-width: $md_w) {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            @media only screen and (max-width: 768px) {
+                display: flex;
+                justify-content: space-evenly;
+                text-align: center;
+            }
+
+
+            .cards {
+                @extend .p-x-2;
+                @extend .mar-x-2;
+                @extend .flexed;
+                @extend .flexed-col;
+
+                @media only screen and (max-width: 768px) {
+                    margin-top: 10px;
+                    margin-left: 7em;
+                    margin-right: 7em;
+
+                    height: 100%;
+                }
+
+                @media only screen and (max-width: $md_w) {
+                    margin-top: 10px;
+                    margin-left: 1em;
+                    margin-right: 1em;
+                }
+
+                .services-img {
+                    max-width: 100%;
+                    @extend .mar-b-0;
+
+                    @media only screen and (max-width:768px) {
+                        max-width: 100%;
+                    }
+
+                    @media only screen and (max-width: $md_w) {
+                        max-width: 100%;
+                    }
+
+                    @media only screen and (max-width: $sm_w) {
+                        max-width: 100%;
+                    }
+                }
+
+                h1 {
+                    @extend .toUpper;
+                    @extend .mar-b-4;
+                    @extend .mar-t-0;
+                    @extend .p-1;
+                    @extend .border-1;
+                    border-top: none;
+
+                    @media only screen and (max-width: $sm_w){
+                        text-align: center;
+                    }
+
+                    @media only screen and (max-width: $md_w){
+                        text-align: center;
+                        margin-bottom: 2em;
+                    }
+                }
+            }
+        }
+    }
 }

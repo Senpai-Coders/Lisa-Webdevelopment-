@@ -61,6 +61,7 @@ const Contact = () => {
 
 		// console.log(validate + " : " + !messageIsValid)
 		if (validate && checkMessage()) {
+			console.log(0)
 			SetIsEmailSending( true )
 			let data = {
 				name: name,
@@ -68,7 +69,7 @@ const Contact = () => {
 				message: message,
 				file:file,
 			}
-			console.log(data)
+			
 
 			axios.post("/api/Contact", data)
 				.then(res => {

@@ -8,7 +8,7 @@ import Footer from "../../Global_Component/Footer/Footer"
 
 
 import axios from 'axios'
-const URL = 'http://localhost:5000/Aabout';
+
 
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
 			email: "email",
 			message: "message",
 		}
-		axios.post(URL, data);
+		axios.post('/api/About', data);
 		
 	}
 	return (

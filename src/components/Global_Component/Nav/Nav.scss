@@ -22,7 +22,6 @@ nav {
             top: -10px;
             left: -20px;
             border: 2px solid white;
-            border-radius: 100px;
             box-sizing: border-box;
         }
     }
@@ -70,7 +69,7 @@ nav {
     }
    
     .active{
-        border-left: 2px solid white;
+        border-left: 2px solid rgb(109, 109, 109);
     }
 
     

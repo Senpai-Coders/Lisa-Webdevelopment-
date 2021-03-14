@@ -6,7 +6,7 @@ import "./Footer.scss"
 const Footer =({isLight})=>{
 	const [ isDarkMode, setIsDarkMode ] = useState(false)
 	return(
-		<div className={"Footer "+(isLight? 'txt-c-29 bg-white':'txt-gray1 bg-transparent')}>
+		<div className={"Footer "+(isLight? 'txt-c-29 bg-white':'txt-gray1 bg-transparent')+(isLight? ' border-t-1':'') }>
       		<table>
 				<thead>
 					<tr>

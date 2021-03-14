@@ -1,11 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Indie+Flower&family=Montserrat:wght@300&display=swap');
+
+@font-face {
+    font-family: 'DDC Hardware Condensed';
+    src: url('../Fonts/DDCHardware/DDCHardware-Condensed.ttf');
+    src: local('DDC Hardware Condensed'), local('DDCHardware-Condensed'),
+        url('../Fonts/DDCHardware/DDCHardware-Condensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 $xsm_font: 0.5em;
 $sm_font: 0.8em;
 $md_font: 1em;
 $lg_font: 2em;
 $xl_font: 3em;
+
+.font-1{
+    font-family: 'Indie Flower';
+}
+
+.font-2{
+    font-family: 'Hammersmith One';
+}
+
+.font-3{
+    font-family: 'Dancing Script';
+}
+
+.font-4{
+    font-family: 'Work Sans';
+}
+
+.font-5{
+    font-family: 'DDC Hardware Condensed';
+}
+
+.font-6{
+    font-family: 'Montserrat';
+}
 
 .font-xs{
     font-size: $xsm_font;

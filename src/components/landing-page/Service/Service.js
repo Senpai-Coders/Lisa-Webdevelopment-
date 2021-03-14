@@ -14,22 +14,51 @@ const isLight = true;
 
 const Service = () => {
 	return (
-		<div className="Service bg-c-4" >
+		<div className="Service" >
 			<Nav isLight={isLight}/>
 			<section className="service-section">
 				<p className="toUpper font-xl">Services</p>
 				<div className="container">
 					<div className="cards">
 						<img alt="graphic design" className="services-img" src={graphic_design}></img>
-						<h1 className="" >Graphic Design</h1>
+						<p>Graphic Design</p>
 					</div>
 					<div className="cards">
 						<img alt="hardware repair" className="services-img" src={harware_repair}></img>
-						<h1>Hardware Repair</h1>
+						<p>Hardware Repair</p>
 					</div>
 					<div className="cards">
 						<img alt="web development" className="services-img" src={web_development}></img>
-						<h1>Web Development</h1>
+						<p>Web Development</p>
+					</div>
+				</div>
+			</section>
+			<section className="details">
+				<div className="mar-b-em-8">
+					<h1 className="font-xl font-1"><span className="font-2">Graphic</span> Design</h1>
+					<div className="">
+						<div className="project-container flexed-evenly">
+							/*  projects card here */
+						</div>
+						<p className="al-center faded font-4 font-lg">No Project Yet 😶</p>
+					</div>
+				</div>
+				<div className="mar-b-em-8">
+					<h1 className="font-xl font-5">Hardware Repair</h1>
+					<div className="">
+						<div className="project-container flexed-evenly">
+							/*  projects card here */
+						</div>
+						<p className="al-center faded font-4 font-lg">No Project Yet 😶</p>
+					</div>
+				</div>
+				<div className="mar-b-em-8">
+					<h1 className="font-xl font-6"><span className="font-2">WEB</span> Development</h1>
+					<div className="">
+						<div className="project-container flexed-evenly">
+							/*  projects card here */
+						</div>
+						<p className="al-center faded font-4 font-lg">No Project Yet 😶</p>
 					</div>
 				</div>
 			</section>

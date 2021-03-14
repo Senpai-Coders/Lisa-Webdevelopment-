@@ -7,6 +7,18 @@
     background: $txt_gray1;
     font-family: "Ubuntu", sans-serif;
 
+
+    .details{
+        @extend .mar-x-9, .mar-t-em-15;
+
+        @media only screen and (max-width:768px) {
+            display: block;
+            margin: 7px 8px;
+            text-align: center;
+        }
+
+    }
+
     .service-section {
         @extend .mar-x-8, .mar-t-7;
 
@@ -25,31 +37,33 @@
         .container {
             @extend .flexed-evenly;
             @extend .mar-t-7;
+            @extend  .mar-b-74;
+
+            text-align: center;
 
             @media only screen and (max-width: $md_w) {
                 display: flex;
                 flex-direction: column;
-                text-align: center;
             }
 
             @media only screen and (max-width: 768px) {
                 display: flex;
                 justify-content: space-evenly;
-                text-align: center;
             }
 
 
             .cards {
-                @extend .p-x-2;
                 @extend .mar-x-2;
                 @extend .flexed;
                 @extend .flexed-col;
+                @extend .bg-white;
+                filter: drop-shadow(0px 4px 4px rgba(78, 78, 78, 0.25));
+                border-radius: 80px 0px 0px 0px;
 
                 @media only screen and (max-width: 768px) {
                     margin-top: 10px;
                     margin-left: 7em;
                     margin-right: 7em;
-
                     height: 100%;
                 }
 
@@ -57,6 +71,7 @@
                     margin-top: 10px;
                     margin-left: 1em;
                     margin-right: 1em;
+                    margin-bottom: 50px;
                 }
 
                 .services-img {
@@ -76,21 +91,25 @@
                     }
                 }
 
-                h1 {
+                p {
                     @extend .toUpper;
                     @extend .mar-b-4;
                     @extend .mar-t-0;
+                    margin-bottom: 0px;
                     @extend .p-1;
                     @extend .border-1;
+                    font-weight: 100;
                     border-top: none;
+                    font-size: $md_font;
 
                     @media only screen and (max-width: $sm_w){
                         text-align: center;
+                        margin-bottom:0px;
                     }
 
                     @media only screen and (max-width: $md_w){
                         text-align: center;
-                        margin-bottom: 2em;
+                        margin-bottom:0px;
                     }
                 }
             }

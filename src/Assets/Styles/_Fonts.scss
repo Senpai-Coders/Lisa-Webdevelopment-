@@ -6,6 +6,10 @@ $sm_font: 0.8em;
 $md_font: 1em;
 $lg_font: 2em;
 
+.flexed{
+    display:flex;
+}
+
 .flexed-evenly {
     display: flex;
     justify-content: space-evenly;
@@ -14,4 +18,96 @@ $lg_font: 2em;
 .flexed-between {
     display: flex;
     justify-content: space-between;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+.p-5p{
+    padding:5px;
+}
+
+.p-10p{
+    padding:10px;
+}
+
+.p-1{
+    padding: 1em;
+}
+
+.p-2{
+    padding: 2em;
+}
+
+.p-3{
+    padding: 3em;
+}
+
+.p-lg{
+    padding: 5em;
+}
+
+.p-x-1{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.p-x-2{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.p-x-3{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.p-x-lg{
+    padding-left: 3em;
+    padding-left: 3em;
+}
+
+.p-y-1{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.p-y-2{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.p-y-3{
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.mar-1{
+    margin: 1em
+}
+
+
+.mar-2{
+    margin: 2em
+}
+
+.mar-3{
+    margin: 3em
+}
+
+.mar-x-1{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.mar-x-2{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+.mar-x-3{
+    margin-left: 3em;
+    margin-right: 3em;
 }

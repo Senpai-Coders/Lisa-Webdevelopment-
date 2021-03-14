@@ -1,10 +1,11 @@
 @import "../../../Assets/Styles/_Fonts.scss";
 @import "../../../Assets/Styles/_ScreenSizes.scss";
 
-nav {
+
+.Navlight {
     align-items: center;
     padding: 12px 8%;
-    // background: rgba(0, 0, 0, 0.158);
+    background: #f6f6f6;
     
     .circle-nav{
         top: 10%;
@@ -24,16 +25,13 @@ nav {
             border-radius: 100px;
             box-sizing: border-box;
         }
-        
-       
-        
     }
     a {
         text-decoration: none;
         font-family: "Work Sans", sans-serif;
         font-size: $md_font;
         font-weight: 600;
-        color: white;
+        color: rgb(36, 36, 36);
 
         padding: 13px 25px;
         
@@ -69,7 +67,7 @@ nav {
 
         align-items: center;
         &:hover{
-           border-left: 2px solid white;
+           border-left: 2px solid rgb(53, 53, 53);
         }
     }
    
@@ -89,12 +87,14 @@ nav {
     
     .logoDesu {
         font-family: "Dancing Script";
-        border-radius: 50%;
+        filter: drop-shadow(0px 4px 4px rgba(136, 136, 136, 0.25));
+        border-radius: 29px;
+        background-color:#4c0b58 ;
         // p {
         //     font-size: $lg_font;
         // }
         img{
-            width:2em;
+            width: 1.2em;
         }
         @media only screen and (max-width: $sm_w) {
             display: none;

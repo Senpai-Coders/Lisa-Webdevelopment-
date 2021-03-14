@@ -3,10 +3,10 @@
 import React,{useState} from 'react'
 import "./Footer.scss"
 
-const Footer =()=>{
+const Footer =({isLight})=>{
 	const [ isDarkMode, setIsDarkMode ] = useState(false)
 	return(
-		<div className="Footer">
+		<div className={"Footer "+(isLight? 'txt-c-29 bg-white':'txt-gray1 bg-transparent')}>
       		<table>
 				<thead>
 					<tr>

@@ -2,14 +2,13 @@
 @import "../../../Assets/Styles/_Colors.scss";
 @import "../../../Assets/Styles/_Fonts.scss";
 @import "../../../Assets/Styles/_ScreenSizes.scss";
-
+@import "../../../Assets/Styles/_Classes.scss";
 
 .Footer {
 
     bottom: 0px;
     margin-top: 1em;
     width: 100%;
-    color: white;
     align-items: center;
     font-family: "Work Sans", sans-serif;
 
@@ -25,7 +24,6 @@
            
         }
 
-       
         td,th{
             padding:1.5vh 3vw 0vw 3vw;
             

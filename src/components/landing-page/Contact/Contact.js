@@ -216,7 +216,7 @@ const Contact = () => {
 				</div>
 			</div>
 			<div className = 'background-parallax'>
-				< Sketch />
+				< Sketch className="max-w" />
 				{/* <img style = {{top:(mouse.y*0.01)+'px',left:(mouse.x*0.01)+'px'}} src = {background10} alt = 'bg-1'/> */}
 				<img style = {{top:(mouse.y*0.01)+'px',left:(mouse.x*0.01)+'px'}}src = {background9} alt = 'bg-9'/>
 				<img style = {{top:(mouse.y*0.04)+'px',left:(mouse.x*0.04)+'px'}} src = {background8_1} alt = 'bg-8'/>

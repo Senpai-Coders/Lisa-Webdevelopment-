@@ -4,9 +4,21 @@ import axios from 'axios';
 
 import Nav from "../../Global_Component/Nav/Nav";
 import Footer from "../../Global_Component/Footer/Footer";
-
+import Loading from "../../Global_Component/Loading_screen/Loading_screen"
+import Sketch from "./Sketch"
 import "./Contact.scss"
 
+import background1 from "../../../Assets/Imgs/Background/ContactBackground/1.png"
+import background2 from "../../../Assets/Imgs/Background/ContactBackground/2.png"
+import background3 from "../../../Assets/Imgs/Background/ContactBackground/3.png"
+import background4 from "../../../Assets/Imgs/Background/ContactBackground/4.png"
+import background5 from "../../../Assets/Imgs/Background/ContactBackground/5.png"
+import background6 from "../../../Assets/Imgs/Background/ContactBackground/6.png"
+import background7 from "../../../Assets/Imgs/Background/ContactBackground/7.png"
+import background8 from "../../../Assets/Imgs/Background/ContactBackground/8.png"
+import background8_1 from "../../../Assets/Imgs/Background/ContactBackground/8.1.png"
+import background9 from "../../../Assets/Imgs/Background/ContactBackground/9.png"
+import background10 from "../../../Assets/Imgs/Background/ContactBackground/10.png"
 const VALIDATORXD = require("email-validator");
 
 const Contact = () => {
@@ -22,6 +34,8 @@ const Contact = () => {
 
 	const [isEmailSending ,SetIsEmailSending] = useState(null)
 	const [resetE , setResetE] = useState(null)
+
+	const [mouse, setMouse]= useState({x:0,y:0})
 	useEffect(() => {
 
 	}, [setName, setEmail, setMessage, setFile ,setFileName ])
@@ -58,10 +72,9 @@ const Contact = () => {
 		var validate = VALIDATORXD.validate(email)
 		
 		setEmailValid(validate);
-
+		
 		// console.log(validate + " : " + !messageIsValid)
 		if (validate && checkMessage()) {
-			console.log(0)
 			SetIsEmailSending( true )
 			let data = {
 				name: name,
@@ -69,7 +82,6 @@ const Contact = () => {
 				message: message,
 				file:file,
 			}
-			
 
 			axios.post("/api/Contact", data)
 				.then(res => {
@@ -101,8 +113,10 @@ const Contact = () => {
 		}
 	}
 	return (
-		<div className="Contact">
-			<Nav />
+		<div className="Contact"  onMouseMove = {(e)=>setMouse({x: e.screenX, y: e.screenY})}>
+			<Nav isLight = {false}/>
+			
+			{ isEmailSending ? <Loading/> : null }
 			<div className = 'background-animation'></div>
 			<div className = 'contact-container'>
 				<h1>Contact us</h1>
@@ -174,9 +188,7 @@ const Contact = () => {
 					<div className="submit-button">
 						<button onClick={handleSubmitButton} type="submit"> submit </button>
 					</div>
-					{
-						isEmailSending ? <h1> Is sending </h1> : null
-					}
+				
 					<div className = 'file-input'>
 						<label className="custom-file-upload" onClick = {()=>resetAttachment()} >
 							<p>Remove File</p>
@@ -199,10 +211,26 @@ const Contact = () => {
 						</label>
 						:null
 						}
+						
 					</div>
 				</div>
 			</div>
-
+			<div className = 'background-parallax'>
+				< Sketch />
+				{/* <img style = {{top:(mouse.y*0.01)+'px',left:(mouse.x*0.01)+'px'}} src = {background10} alt = 'bg-1'/> */}
+				<img style = {{top:(mouse.y*0.01)+'px',left:(mouse.x*0.01)+'px'}}src = {background9} alt = 'bg-9'/>
+				<img style = {{top:(mouse.y*0.04)+'px',left:(mouse.x*0.04)+'px'}} src = {background8_1} alt = 'bg-8'/>
+				<img style = {{top:(mouse.y*0.02)+'px',left:(mouse.x*0.02)+'px'}} src = {background8} alt = 'bg-8'/>
+				<img style = {{top:(mouse.y*0.03)+'px',left:(mouse.x*0.03)+'px'}}src = {background7} alt = 'bg-7'/>
+				<img style = {{top:(mouse.y*0.04)+'px',left:(mouse.x*0.04)+'px'}}src = {background6} alt = 'bg-6'/>
+				<img style = {{top:(mouse.y*0.05)+'px',left:(mouse.x*0.05)+'px'}} src = {background5} alt = 'bg-5'/>
+				<img style = {{top:(mouse.y*0.06)+'px',left:(mouse.x*0.06)+'px'}} src = {background4} alt = 'bg-4'/>
+				<img style = {{top:(mouse.y*0.07)+'px',left:(mouse.x*0.07)+'px'}} src = {background3} alt = 'bg-3'/>
+				<img style = {{top:(mouse.y*0.08)+'px',left:(mouse.x*0.08)+'px'}} src = {background2} alt = 'bg-2'/>
+				<img style = {{top:(mouse.y*0.09)+'px',left:(mouse.x*0.09)+'px'}} src = {background1} alt = 'bg-1'/>
+				
+				
+			</div>
 			<Footer />
 		</div>
 
